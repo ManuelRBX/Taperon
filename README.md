@@ -27,13 +27,17 @@ cd ~/taperon_ws/src
 git clone https://github.com/ManuelRBX/Taperon.git
 
 3. Build the Workspace
+
 cd ~/taperon_ws
+
 colcon build --symlink-install
 
 Source your environment:
+
 source install/setup.bash
 
 4. Launch Taperon in Gazebo
+
 ros2 launch taperon_bringup taperon_gz.launch.py
 
 
