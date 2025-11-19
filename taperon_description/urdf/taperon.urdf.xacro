@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="taperon" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0708427730604094 0.0120069913603685 -4.39514124916511E-18" rpy="0 0 0" />
+      <mass value="6.0" />
+      <inertia
+        ixx="1.0971824669988"
+        ixy="-6.72641588721367E-17"
+        ixz="4.98158605125975E-17"
+        iyy="1.45930594172483"
+        iyz="-5.0258052230781E-16"
+        izz="0.510073622144381" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 0.949019607843137 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="l1">
+    <inertial>
+      <origin xyz="-1.38777878078145E-16 -4.16333634234434E-17 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="3.30872245021211E-24"
+        ixz="1.61165209109768E-22"
+        iyy="2.12034465771185E-06"
+        iyz="5.2272633464336E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl1" type="continuous">
+    <origin xyz="0.22084 -0.235 0.065" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l1" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="l2">
+    <inertial>
+      <origin xyz="-1.11022302462516E-16 -2.08166817117217E-17 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-4.96308367531817E-24"
+        ixz="1.54539600381525E-22"
+        iyy="2.12034465771185E-06"
+        iyz="5.22648558026031E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l2.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl2" type="continuous">
+    <origin xyz="0.22084 -0.205 0" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l2" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="l3">
+    <inertial>
+      <origin xyz="-2.77555756156289E-17 0 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-3.30872245021211E-24"
+        ixz="9.27803307014988E-23"
+        iyy="2.12034465771185E-06"
+        iyz="5.22755551092004E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l3.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl3" type="continuous">
+    <origin xyz="0.22084 -0.155 -0.06" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l3" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="l4">
+    <inertial>
+      <origin xyz="-2.77555756156289E-17 0 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-3.30872245021211E-24"
+        ixz="9.27803307014988E-23"
+        iyy="2.12034465771185E-06"
+        iyz="5.22755551092004E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l4.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l4.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl4" type="continuous">
+    <origin xyz="0.22084 -0.0775 -0.06" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l4" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="l5">
+    <inertial>
+      <origin xyz="1.20346441145891E-17 -2.08166817117217E-17 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.3" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-4.96308367531817E-24"
+        ixz="-1.0195844475648E-22"
+        iyy="2.12034465771185E-06"
+        iyz="1.04202413175718E-20"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l5.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l5.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl5" type="continuous">
+    <origin xyz="0.22084 0 -0.06" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l5" />
+    <axis xyz="0 0 1" />
+    <limit effort="50.0" velocity="20.0"/>
+    <dynamics damping="0.1" friction="0.2"/>
+  </joint>
+
+  <link name="l6">
+    <inertial>
+      <origin xyz="0 -6.93889390390723E-18 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-3.30872245021211E-24"
+        ixz="9.27803307014988E-23"
+        iyy="2.12034465771185E-06"
+        iyz="5.22755551092004E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l6.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l6.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl6" type="continuous">
+    <origin xyz="0.22084 0.0775 -0.06" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l6" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="l7">
+    <inertial>
+      <origin xyz="2.77555756156289E-17 -1.38777878078145E-17 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="0"
+        ixz="9.27803307014988E-23"
+        iyy="2.12034465771185E-06"
+        iyz="5.22755551092004E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l7.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l7.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl7" type="continuous">
+    <origin xyz="0.22084 0.155 -0.06" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l7" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="l8">
+    <inertial>
+      <origin xyz="0 -9.10729824887824E-18 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-4.96308367531817E-24"
+        ixz="1.54539947280464E-22"
+        iyy="2.12034465771185E-06"
+        iyz="5.22652004437335E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l8.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l8.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl8" type="continuous">
+    <origin xyz="0.22084 0.205 0" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l8" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="l9">
+    <inertial>
+      <origin xyz="0 1.38777878078145E-17 -0.00499999999999998" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="6.61744490042422E-24"
+        ixz="1.61165456553151E-22"
+        iyy="2.12034465771185E-06"
+        iyz="5.22769440213833E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l9.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/l9.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jl9" type="continuous">
+    <origin xyz="0.22084 0.235 0.065" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="l9" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="r1">
+    <inertial>
+      <origin xyz="-1.11022302462516E-16 2.77555756156289E-17 0.00499999999999999" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-1.65436122510606E-24"
+        ixz="-1.81398114143543E-22"
+        iyy="2.12034465771185E-06"
+        iyz="2.42777647316228E-23"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr1" type="continuous">
+    <origin xyz="-0.079157 -0.235 0.065" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="r1" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="r2">
+    <inertial>
+      <origin xyz="2.77555756156289E-17 -1.86482773667507E-17 0.005" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="1.65436122510606E-24"
+        ixz="2.20225950264768E-22"
+        iyy="2.12034465771185E-06"
+        iyz="-5.19481120469962E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r2.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr2" type="continuous">
+    <origin xyz="-0.079157 -0.205 0" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="r2" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="r3">
+    <inertial>
+      <origin xyz="-2.77555756156289E-17 0 0.00500000000000002" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-3.97046694025453E-23"
+        ixz="1.63609480293604E-22"
+        iyy="2.12034465771185E-06"
+        iyz="2.07054762342682E-23"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r3.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr3" type="continuous">
+    <origin xyz="-0.079157 -0.155 -0.06" rpy="1.5708 0.051019 -1.5708" />
+    <parent link="base_link" />
+    <child link="r3" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="r4">
+    <inertial>
+      <origin xyz="2.77555756156289E-17 -1.38777878078145E-17 -0.005" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-1.05879118406788E-22"
+        ixz="-5.27975819480618E-24"
+        iyy="2.12034465771185E-06"
+        iyz="-2.56602770116205E-22"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r4.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r4.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr4" type="continuous">
+    <origin xyz="-0.079157 -0.0775 -0.06" rpy="1.5708 -1.1689 1.5708" />
+    <parent link="base_link" />
+    <child link="r4" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="r5">
+    <inertial>
+      <origin xyz="1.60461921527855E-17 1.38777878078145E-17 0.00500000000000002" rpy="0 0 0" />
+      <mass value="0.3" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-3.30872245021211E-23"
+        ixz="-1.70401532106193E-22"
+        iyy="2.12034465771185E-06"
+        iyz="2.62857502617788E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r5.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r5.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr5" type="continuous">
+    <origin xyz="-0.079157 0 -0.06" rpy="1.5708 -0.052725 -1.5708" />
+    <parent link="base_link" />
+    <child link="r5" />
+    <axis xyz="0 0 1" />
+    <limit effort="50.0" velocity="20.0"/>
+    <dynamics damping="0.1" friction="0.2"/>
+  </joint>
+
+  <link name="r6">
+    <inertial>
+      <origin xyz="3.46944695195361E-18 2.77555756156289E-17 -0.00500000000000002" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-1.05879118406788E-22"
+        ixz="-5.27975819480619E-24"
+        iyy="2.12034465771185E-06"
+        iyz="-2.56602770116205E-22"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r6.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r6.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr6" type="continuous">
+    <origin xyz="-0.079157 0.0775 -0.06" rpy="1.5708 -1.1689 1.5708" />
+    <parent link="base_link" />
+    <child link="r6" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="r7">
+    <inertial>
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="0"
+        ixz="2.97439265988952E-22"
+        iyy="2.12034465771185E-06"
+        iyz="-5.19422692585751E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r7.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r7.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr7" type="continuous">
+    <origin xyz="-0.079157 0.155 -0.06" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="r7" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="r8">
+    <inertial>
+      <origin xyz="-2.77555756156289E-17 -1.38777878078145E-17 0.005" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="-1.05879118406788E-22"
+        ixz="2.07423726463236E-22"
+        iyy="2.12034465771185E-06"
+        iyz="4.67363283241889E-24"
+        izz="3.99773948354608E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r8.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r8.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr8" type="continuous">
+    <origin xyz="-0.079157 0.205 0" rpy="1.5708 -0.31004 -1.5708" />
+    <parent link="base_link" />
+    <child link="r8" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="r9">
+    <inertial>
+      <origin xyz="-8.32667268468867E-17 -2.77555756156289E-17 0.005" rpy="0 0 0" />
+      <mass value="0.0145769899126567" />
+      <inertia
+        ixx="2.12034465771185E-06"
+        ixy="3.30872245021211E-24"
+        ixz="2.95236164496244E-22"
+        iyy="2.12034465771185E-06"
+        iyz="-5.19394624347761E-21"
+        izz="3.99773948354609E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r9.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://taperon_description/urdf/meshes/r9.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="jr9" type="continuous">
+    <origin xyz="-0.079157 0.235 0.065" rpy="1.5708 -0.010065 -1.5708" />
+    <parent link="base_link" />
+    <child link="r9" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <!-- ros2_control: ONLY jl5 (left) and jr5 (right) are driven -->
+  <ros2_control name="taperon_control" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+
+    <joint name="jl5">
+      <command_interface name="velocity" />
+      <state_interface name="velocity" />
+      <state_interface name="position" />
+    </joint>
+
+    <joint name="jr5">
+      <command_interface name="velocity" />
+      <state_interface name="velocity" />
+      <state_interface name="position" />
+    </joint>
+  </ros2_control>
+    <!-- Gazebo plugin that creates the ros2_control controller_manager in Gazebo -->
+  <gazebo>
+    <plugin filename="ign_ros2_control-system"
+            name="ign_ros2_control::IgnitionROS2ControlPlugin">
+      <robot_param>robot_description</robot_param>
+      <robot_param_node>taperon/robot_state_publisher</robot_param_node>
+      <parameters>/home/sumk/taperon_ws/install/taperon_bringup/share/taperon_bringup/config/diff_drive.yaml</parameters>
+      <controller_manager_name>controller_manager</controller_manager_name>
+    </plugin>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,85 @@
+# # This section configures the controller_manager created by gz_ros2_control
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 100
+
+#     joint_state_broadcaster:
+#       type: joint_state_broadcaster/JointStateBroadcaster
+
+#     diff_drive_controller:
+#       type: diff_drive_controller/DiffDriveController
+
+# # These are the parameters for the diff drive controller itself
+# diff_drive_controller:
+#   ros__parameters:
+#     left_wheel_names:  ["jl5"]
+#     right_wheel_names: ["jr5"]
+
+#     wheel_separation: 0.40      # m  (center-to-center between jl5 & jr5)
+#     wheel_radius:     0.10      # m  (effective drive radius)
+
+#     publish_rate: 50.0
+#     cmd_vel_timeout: 0.5
+
+#     use_stamped_vel: false
+#     enable_odom_tf:  false
+
+#     odom_frame_id: odom
+#     base_frame_id: base_link
+
+#     linear:
+#       x:
+#         has_velocity_limits: true
+#         max_velocity: 1.5
+#         has_acceleration_limits: true
+#         max_acceleration: 2.0
+
+#     angular:
+#       z:
+#         has_velocity_limits: true
+#         max_velocity: 2.0
+#         has_acceleration_limits: true
+#         max_acceleration: 3.0
+
+#     open_loop: true
+
+# # Optional: params for JSB (can also be left empty)
+# joint_state_broadcaster:
+#   ros__parameters:
+#     publish_rate: 50.0
+
+
+
+
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    diff_drive_controller:
+      type: diff_drive_controller/DiffDriveController
+
+diff_drive_controller:
+  ros__parameters:
+    left_wheel_names:  ['jl5']
+    right_wheel_names: ['jr5']
+
+    wheel_separation: 0.42
+    wheel_radius: 0.07
+
+    wheels_per_side: 1
+    position_feedback: true
+
+    cmd_vel_timeout: 0.5
+    use_stamped_vel: false        # ← we’re using /cmd_vel_unstamped
+    open_loop: true
+
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    enable_odom_tf: true
+
+    publish_rate: 50.0
+    velocity_rolling_window_size: 10
+
