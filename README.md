@@ -19,8 +19,11 @@ xacro
 2. Clone the Repository
 
 Create a workspace and clone the repo:
+
 mkdir -p ~/taperon_ws/src
+
 cd ~/taperon_ws/src
+
 git clone https://github.com/ManuelRBX/Taperon.git
 
 3. Build the Workspace
